@@ -85,8 +85,8 @@ terraform apply
 #### 4.2 Script de Transformação (Databricks)
 1. Criar notebook `02_transform_bronze_to_silver` (Python)
 2. Copiar código de `src/02.transform_bronze_to_silver.py`
-3. Configurar widget `processing_date` = `yyyy-mm`
-4. Executar todas as células
+3. Preencher widget `processing_date` = `yyyy-mm`
+4. Executar todas as células para cada periodo desejado
 
 ### 5. Verificar Resultados
 
@@ -98,20 +98,19 @@ Para cada arquivo em `analysis/`:
 
 Execute as seguintes queries SQL no Databricks para gerar visualizações:
 
-#### 5.1 Análise de Passageiros por Hora (`passenger_avg_hour_may.sql`)
+#### 5.1 Análise de Passageiros por Hora (`passenger_avg_hour_may.sql`) 
 - **O que faz**: Calcula a média de passageiros por hora do dia em maio de 2023
-- **Imagem**: ![Passageiros por Hora](img/passenger_avg_hour_may.png)
-(`dashboard_passenger_avg_hour_may_exemple.png`)
-- **Resultado**: Gafico de coluna média de passageiros por hora do dia em maio de 2023
-- **Imagem**: ![Dashboard](img/dashboard_passenger_avg_hour_may_exemple.png)
+![Passageiros por Hora](img/passenger_avg_hour_may.png)
+- **Resultado**: Gafico de coluna média de passageiros por hora do dia em maio de 2023 (`dashboard_passenger_avg_hour_may_exemple.png`)
+ ![Dashboard](img/dashboard_passenger_avg_hour_may_exemple.png)
 
 #### 5.2 Distribuição de Tipos de Pagamento (`payment_types_percentage.sql`)
 - **O que faz**: Analisa a porcentagem de cada tipo de pagamento (cartão, dinheiro, etc.)
-- **Imagem**: ![Tipos de Pagamento](img/payment_types_percentage.png)
+![Tipos de Pagamento](img/payment_types_percentage.png)
 
 #### 5.3 Valor Médio Mensal - Táxis Amarelos (`total_amount_avg_month_yellow.sql`)
 - **O que faz**: Calcula o valor médio das corridas de táxis amarelos por mês
-- **Imagem**: ![Valor Médio Mensal](img/total_amount_avg_month_yellow.png)
+![Valor Médio Mensal](img/total_amount_avg_month_yellow.png)
 
 
 -----
